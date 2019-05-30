@@ -18,7 +18,12 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
+from base import views
+
 urlpatterns = [
-    path('journal/', include('journal.urls')),
+    path('', views.index, name='Site Home'),
+    path('journal/', include('journal.urls', namespace='journal')),
+    path('effection/', include('effection.urls', namespace='effection')),
+    path('astro/', include('astro.urls', namespace='astro')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

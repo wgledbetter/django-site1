@@ -45,7 +45,12 @@ INSTALLED_APPS = [
 
     # Added
     # 'django.contrib.gis',
+    
+    # Mine
+    'base',
     'journal',
+    'effection',
+    'astro',
 ]
 
 MIDDLEWARE = [
