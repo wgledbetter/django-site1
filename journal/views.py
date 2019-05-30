@@ -13,7 +13,8 @@ def test(request):
 def index(request):
     # What would be useful to go in here?
         # Journal posts closest to your current location?
-    return HttpResponse('Journal Index')
+    #return HttpResponse('Journal Index')
+    return render(request, 'journal/index.html')
 
 #-------------------------------------------------------------------------------
 def food(request):
