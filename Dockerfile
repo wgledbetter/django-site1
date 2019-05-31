@@ -6,9 +6,11 @@ RUN apt-get update && apt-get install -y \
 
 # Install Python Packages
 RUN pip install --trusted-host pypi.python.org \
-    django \
-    gunicorn \
-    sqlparse \
+    Django==2.2.1 \
+    django-mysql==3.1.0 \
+    gunicorn==19.9.0 \
+    sqlparse==0.3.0 \
+    mysqlclient
     
 #    plotly \
 #    pandas
