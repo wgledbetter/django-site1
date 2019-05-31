@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,36 +9,36 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'base/css/open-iconic-bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/animate.css' %}">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     
-    <link rel="stylesheet" href="{% static 'base/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-    <link rel="stylesheet" href="{% static 'base/css/aos.css' %}">
+    <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="{% static 'base/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="css/ionicons.min.css">
 
-    <link rel="stylesheet" href="{% static 'base/css/bootstrap-datepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
 
     
-    <link rel="stylesheet" href="{% static 'base/css/flaticon.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/icomoon.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url({% static 'base/images/author.jpg' %});"></span>William Ledbetter</a></h1>
+			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(images/author.jpg);"></span>Louie Smith</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-					<li class="colorlib-active"><a href="index.html">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="collection.html">Collection</a></li>
-					<li><a href="about.html">About Me</a></li>
+					<li class="colorlib-active"><a href="about.html">About Me</a></li>
 					<li><a href="services.html">My Services</a></li>
 					<li><a href="blog.html">Blog</a></li>
 					<li><a href="contact.html">Contact</a></li>
@@ -63,23 +61,17 @@
 			<section class="ftco-section-no-padding bg-light">
 				<div class="hero-wrap">
 					<div class="overlay"></div>
-					<div class="d-flex align-items-center js-fullheight">
-						<div class="author-image text img d-flex">
-							<section class="home-slider js-fullheight owl-carousel">
-					      <div class="slider-item js-fullheight" style="background-image: url({% static 'base/images/author.jpg' %});">
-					      </div>
-
-					      <div class="slider-item js-fullheight" style="background-image:url({% static 'base/images/author-2.jpg' %});">
-					      </div>
-					    </section>
+					<div class="d-flex">
+						<div class="author-image text img p-md-5" style="background-image: url(images/author.jpg);">
+							
 						</div>
-						<div class="author-info text p-3 p-md-5">
+						<div class="author-info text p-4 p-md-5 mt-5 mb-5">
 							<div class="desc">
-								<span class="subheading">Hello! I'm</span>
-								<h1 class="big-letter">William Ledbetter</h1>
-								<h1 class="mb-4"><span>William Ledbetter</span> An Engineer, etc. <span>I Build and Learn Things</span></h1>
+								<span class="subheading">Nice To Meet You</span>
+								<h1 class="big-letter">Louie Smith</h1>
+								<h1 class="mb-4"><span>My Name is Louie Smith</span></h1>
 								<p class="mb-4">I am A Photographer from America Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								<h3 class="signature h1">William Ledbetter</h3>
+								<h3 class="signature h1">Louie Smith</h3>
 								<ul class="ftco-social mt-3">
 		              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 		              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -90,6 +82,48 @@
 					</div>
 				</div>
 			</section>
+			<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);">
+	    	<div class="container">
+	    		<div class="row justify-content-start">
+	    			<div class="col-md-10">
+			    		<div class="row">
+			          <div class="col-xl-3 col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+			            <div class="block-18">
+			              <div class="text d-flex align-items-center">
+			                <strong class="number" data-number="120">0</strong>
+			                <span>Pounds of Equipment</span>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-xl-3 col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+			            <div class="block-18">
+			              <div class="text d-flex align-items-center">
+			                <strong class="number" data-number="150">0</strong>
+			                <span>Studio Session</span>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-xl-3 col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+			            <div class="block-18">
+			              <div class="text d-flex align-items-center">
+			                <strong class="number" data-number="200">0</strong>
+			                <span>Finished Photosessions</span>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-xl-3 col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+			            <div class="block-18">
+			              <div class="text d-flex align-items-center">
+			                <strong class="number" data-number="200">0</strong>
+			                <span>Happy Clients</span>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+		        </div>
+	        </div>
+	    	</div>
+	    </section>
 			<section class="ftco-section instagram">
 				<div class="container">
 					<div class="row justify-content-center mb-2 pb-3">
@@ -99,35 +133,35 @@
 	        </div>  
 					<div class="row no-gutters">
 		        <div class="col-sm-12 col-md ftco-animate">
-		          <a href="{% static 'base/images/image_1.jpg' %}" class="insta-img image-popup" style="background-image: url({% static 'base/images/image_1.jpg' %});">
+		          <a href="images/image_1.jpg" class="insta-img image-popup" style="background-image: url(images/image_1.jpg);">
 		            <div class="icon d-flex justify-content-center">
 		              <span class="icon-instagram align-self-center"></span>
 		            </div>
 		          </a>
 		        </div>
 		        <div class="col-sm-12 col-md ftco-animate">
-		          <a href="{% static 'base/images/image_2.jpg' %}" class="insta-img image-popup" style="background-image: url({% static 'base/images/image_2.jpg' %});">
+		          <a href="images/image_2.jpg" class="insta-img image-popup" style="background-image: url(images/image_2.jpg);">
 		            <div class="icon d-flex justify-content-center">
 		              <span class="icon-instagram align-self-center"></span>
 		            </div>
 		          </a>
 		        </div>
 		        <div class="col-sm-12 col-md ftco-animate">
-		          <a href="{% static 'base/images/image_3.jpg' %}" class="insta-img image-popup" style="background-image: url({% static 'base/images/image_3.jpg' %});">
+		          <a href="images/image_3.jpg" class="insta-img image-popup" style="background-image: url(images/image_3.jpg);">
 		            <div class="icon d-flex justify-content-center">
 		              <span class="icon-instagram align-self-center"></span>
 		            </div>
 		          </a>
 		        </div>
 		        <div class="col-sm-12 col-md ftco-animate">
-		          <a href="{% static 'base/images/image_4.jpg' %}" class="insta-img image-popup" style="background-image: url({% static 'base/images/image_4.jpg' %});">
+		          <a href="images/image_4.jpg" class="insta-img image-popup" style="background-image: url(images/image_4.jpg);">
 		            <div class="icon d-flex justify-content-center">
 		              <span class="icon-instagram align-self-center"></span>
 		            </div>
 		          </a>
 		        </div>
 		        <div class="col-sm-12 col-md ftco-animate">
-		          <a href="{% static 'base/images/image_5.jpg' %}" class="insta-img image-popup" style="background-image: url({% static 'base/images/image_5.jpg' %});">
+		          <a href="images/image_5.jpg" class="insta-img image-popup" style="background-image: url(images/image_5.jpg);">
 		            <div class="icon d-flex justify-content-center">
 		              <span class="icon-instagram align-self-center"></span>
 		            </div>
@@ -143,12 +177,12 @@
 	            <div class="ftco-footer-widget mb-4 ml-md-4">
 	              <h2 class="ftco-heading-2">Recent Photos</h2>
 	              <ul class="list-unstyled photo">
-	                <li><a href="#" class="img" style="background-image: url( {% static 'base/images/image_1.jpg' %} );"></a></li>
-	                <li><a href="#" class="img" style="background-image: url( {% static 'base/images/image_2.jpg' %} );"></a></li>
-	                <li><a href="#" class="img" style="background-image: url( {% static 'base/images/image_3.jpg' %} );"></a></li>
-	                <li><a href="#" class="img" style="background-image: url( {% static 'base/images/image_4.jpg' %} );"></a></li>
-	                <li><a href="#" class="img" style="background-image: url( {% static 'base/images/image_5.jpg' %} );"></a></li>
-	                <li><a href="#" class="img" style="background-image: url( {% static 'base/images/image_6.jpg' %} );"></a></li>
+	                <li><a href="#" class="img" style="background-image: url(images/image_1.jpg);"></a></li>
+	                <li><a href="#" class="img" style="background-image: url(images/image_2.jpg);"></a></li>
+	                <li><a href="#" class="img" style="background-image: url(images/image_3.jpg);"></a></li>
+	                <li><a href="#" class="img" style="background-image: url(images/image_4.jpg);"></a></li>
+	                <li><a href="#" class="img" style="background-image: url(images/image_5.jpg);"></a></li>
+	                <li><a href="#" class="img" style="background-image: url(images/image_6.jpg);"></a></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -194,23 +228,23 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="{% static 'base/js/jquery.min.js' %}"></script>
-  <script src="{% static 'base/js/jquery-migrate-3.0.1.min.js' %}"></script>
-  <script src="{% static 'base/js/popper.min.js' %}"></script>
-  <script src="{% static 'base/js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'base/js/jquery.easing.1.3.js' %}"></script>
-  <script src="{% static 'base/js/jquery.waypoints.min.js' %}"></script>
-  <script src="{% static 'base/js/jquery.stellar.min.js' %}"></script>
-  <script src="{% static 'base/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'base/js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'base/js/aos.js' %}"></script>
-  <script src="{% static 'base/js/jquery.animateNumber.min.js' %}"></script>
-  <script src="{% static 'base/js/bootstrap-datepicker.js' %}"></script>
-  <script src="{% static 'base/js/jquery.timepicker.min.js' %}"></script>
-  <script src="{% static 'base/js/scrollax.min.js' %}"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{% static 'base/js/google-map.js' %}"></script>
-  <script src="{% static 'base/js/main.js' %}"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
     
   </body>
 </html>
