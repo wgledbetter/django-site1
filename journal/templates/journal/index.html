@@ -1,208 +1,134 @@
-{% extends 'journal/frame.html' %}
+{% extends 'base/frame.html' %}
 {% load static %}
 
-<!DOCTYPE HTML>
-<!--
-	HeavyIndustry by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
+<!DOCTYPE html>
 
 {% block content %}
-<!-- Banner Content -->
-<div id="banner" class="row">
-	<div class="12u">
-		<section><a href="#"><img src="{% static 'journal/images/pics01.jpg' %}" alt=""></a></section>
-	</div>
-</div>
-
-<!-- Marketing Content -->
-<div id="marketing" class="row">
-
-	<div class="3u">
-		<section class="box">
-			<h2>Journal</h2>
-			<p class="subtitle">A Journal of all my thoughts</p>
-			<ul class="style1">
-				<li><a href="#">Donec dictum metus sapien</a></li>
-				<li><a href="#">DonecInteger gravida urna</a></li>
-				<li><a href="#">DonecEtiam posuere amet nisl</a></li>
-				<li><a href="#">DonecMauris vulputate nibh</a></li>
-			</ul>
-			<p><a href="#" class="button"><span>Read More</span></a></p>
-		</section>
-	</div>
-	<div class="3u">
-		<section class="box">
-			<h2>Food</h2>
-			<p class="subtitle">Everything I eat</p>
-			<ul class="style1">
-				<li><a href="#">Donec dictum metus sapien</a></li>
-				<li><a href="#">DonecInteger gravida urna</a></li>
-				<li><a href="#">DonecEtiam posuere amet nisl</a></li>
-				<li><a href="#">DonecMauris vulputate nibh</a></li>
-			</ul>
-			<p><a href="#" class="button"><span>Read More</span></a></p>
-		</section>
-	</div>
-	<div class="3u">
-		<section class="box">
-			<h2>Dreams</h2>
-			<p class="subtitle">Most of my dreams</p>
-			<ul class="style1">
-				<li><a href="#">Donec dictum metus sapien</a></li>
-				<li><a href="#">DonecInteger gravida urna</a></li>
-				<li><a href="#">DonecEtiam posuere amet nisl</a></li>
-				<li><a href="#">DonecMauris vulputate nibh</a></li>
-			</ul>
-			<p><a href="#" class="button"><span>Read More</span></a></p>
-		</section>
-	</div>
-	<div class="3u">
-		<section class="box">
-			<h2>Media</h2>
-			<p class="subtitle">Any YouTube videos I like</p>
-			<ul class="style1">
-				<li><a href="#">Donec dictum metus sapien</a></li>
-				<li><a href="#">DonecInteger gravida urna</a></li>
-				<li><a href="#">DonecEtiam posuere amet nisl</a></li>
-				<li><a href="#">DonecMauris vulputate nibh</a></li>
-			</ul>
-			<p><a href="#" class="button"><span>Read More</span></a></p>
-		</section>
-	</div>
-
-</div>
-
-
-
-<!-- Page Content -->
-<div id="page" class="row">
-
-	<!-- Content Area -->
-	<div id="content" class="8u skel-cell-important">
-
-		<!-- Main Content Area -->
-		<section>
-			<h2>Praesent condimentum</h2>
-			<p><a href="#"><img src="{% static 'journal/images/pics02.jpg' %}" alt=""></a></p>
-			<p>This is <strong>Heavy Industry</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
-			<p><a href="#" class="button"><span>Read More</span></a></p>
-		</section>
-
-
-		<!-- Two Column Area -->
-		<section>
-			<div id="two-column" class="5grid">
-				<div class="row">
-					<div class="6u">
-						<section>
-							<h2>Tristique eleifend</h2>
-							<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p>
-							<ul class="style3">
-								<li class="first">
-									<p><span class="date"><a href="#">20012.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
-									<p><a href="#">Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
-								</li>
-								<li>
-									<p><span class="date"><a href="#">20012.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
-									<p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus. </a></p>
-								</li>
-							</ul>
-						</section>
-					</div>
-					<div class="6u">
-						<section>
-							<h2>Donec dictum metus</h2>
-							<ul class="style4">
-								<li class="first">
-									<h3>Mauris vulputate dolor sit amet</h3>
-									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-								</li>
-								<li>
-									<h3>Fusce ultrices fringilla metus</h3>
-									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-								</li>
-								<li>
-									<h3>Donec dictum metus in sapien</h3>
-									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-								</li>
-							</ul>
-						</section>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-	</div>
-
-	<!-- Sidebar Area -->
-	<div id="sidebar" class="4u">
-
-		<!-- Sidebar Section 1 -->
-		<section id="box1">
-
-			<!-- Two Column Content Area -->
-			<div class="5grid">
-				<div class="row">
-					<div class="6u">
-						<section>
-							<h2>Nulla  eleifend</h2>
-							<ul class="style4">
-								<li class="first"><a href="#">Maecenas luctus sapien</a></li>
-								<li><a href="#">Etiam rhoncus volutpat erat</a></li>
-								<li><a href="#">Donec dictum metus sapien</a></li>
-								<li><a href="#">Integer gravida quis urna</a></li>
-								<li><a href="#">Etiam rhoncus volutpat erat</a></li>
-								<li><a href="#">Donec dictum metus sapien</a></li>
-							</ul>
-						</section>
-					</div>
-					<div class="6u">
-						<section>
-							<h2>Nulla  eleifend</h2>
-							<ul class="style4">
-								<li class="first"><a href="#">Maecenas luctus sapien</a></li>
-								<li><a href="#">Etiam rhoncus volutpat erat</a></li>
-								<li><a href="#">Donec dictum metus sapien</a></li>
-								<li><a href="#">Integer gravida quis urna</a></li>
-								<li><a href="#">Donec dictum metus sapien</a></li>
-								<li><a href="#">Integer gravida quis urna</a></li>
-							</ul>
-						</section>
-					</div>
-				</div>
-			</div>
-			<!-- Two Column Content Area Ends Here -->
-
-		</section>
-
-		<!-- Sidebar Section 2 -->
-		<section id="box2">
-			<h2>Ipsum Consequat</h2>
-			<ul class="style2">
-				<li class="first">
-					<p><a href="#"><img src="{% static 'journal/images/pics07.jpg' %}" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-				</li>
-				<li>
-					<p><a href="#"><img src="{% static 'journal/images/pics08.jpg' %}" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-				</li>
-				<li>
-					<p><a href="#"><img src="{% static 'journal/images/pics09.jpg' %}" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-				</li>
-				<li>
-					<p><a href="#"><img src="{% static 'journal/images/pics10.jpg' %}" alt="">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. </a></p>
-				</li>
-			</ul>
-			<p><a href="#" class="button"><span>Read More</span></a></p>
-		</section>
-
-
-	</div>
-
-</div>
-		<!-- Page Content -->
+<div id="colorlib-main">
+  <section class="ftco-section ftco-bread">
+    <div class="container">
+      <div class="row no-gutters slider-text justify-content-center align-items-center">
+      <div class="col-md-8 ftco-animate">
+        <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>Journals</span></p>
+        <h1 class="bread">My Journals</h1>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="ftco-section-3">
+    <div class="photograhy">
+      <div class="row">
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_1.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_1.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 01</h3>
+              <span class="tag">Model</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_2.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_2.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 02</h3>
+              <span class="tag">Nature</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_3.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_3.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 03</h3>
+              <span class="tag">Fashion</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_4.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_4.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 04</h3>
+              <span class="tag">Travel</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_5.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_5.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 05</h3>
+              <span class="tag">Travel</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_6.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_6.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 06</h3>
+              <span class="tag">Travel</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_7.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_7.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 07</h3>
+              <span class="tag">Fashion, Model</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_8.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_8.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 08</h3>
+              <span class="tag">Nature</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static '/base/images/image_9.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_9.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 09</h3>
+              <span class="tag">Technology</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static 'base/images/image_10.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_10.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 10</h3>
+              <span class="tag">Model</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static 'base/images/image_11.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_11.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 11</h3>
+              <span class="tag">Fashion</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <a href="{% static 'base/images/image_12.jpg' %}" class="photography-entry img image-popup d-flex justify-content-start align-items-end" style="background-image: url({% static 'base/images/image_12.jpg' %});">
+            <div class="overlay"></div>
+            <div class="text ml-4 mb-4">
+              <h3>Photo 12</h3>
+              <span class="tag">Photography</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- END COLORLIB-MAIN -->
 
 {% endblock %}

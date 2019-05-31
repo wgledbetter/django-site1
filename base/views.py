@@ -3,5 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    # return HttpResponse('Home Page')
-    return render(request, 'base/index.html')
+    context = {
+        'page': 'base',
+    }
+    return render(request, 'base/index.html', context)
