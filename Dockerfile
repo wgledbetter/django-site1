@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.6
 
 # Install Debian Packages
 RUN apt-get update && apt-get install -y \
@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --trusted-host pypi.python.org \
     django \
     gunicorn \
-    sqlparse
+    sqlparse \
+    
 #    plotly \
 #    pandas
 
