@@ -26,9 +26,9 @@ SECRET_KEY = '&v2q!6qr$49#i#r^y$dwtgay*5llr79a^tpm9ft12t6a*6lvxn'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0cb5c073ee2343329190a606a61b28f8.vfs.cloud9.us-east-2.amazonaws.com',
-    '78380b6ebe494061bdec7d653cd183d2.vfs.cloud9.us-east-2.amazonaws.com',
-    'da73186fb4c146dd9e6a8fede3577bc5.vfs.cloud9.us-east-2.amazonaws.com',
+    # '0cb5c073ee2343329190a606a61b28f8.vfs.cloud9.us-east-2.amazonaws.com',
+    # '78380b6ebe494061bdec7d653cd183d2.vfs.cloud9.us-east-2.amazonaws.com',
+    # 'da73186fb4c146dd9e6a8fede3577bc5.vfs.cloud9.us-east-2.amazonaws.com',
     '127.0.0.1',
     ]
 
@@ -102,7 +102,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'sample',
         'HOST': 'db',
-        'PORT': '7777',  # Doubt 7777 will interfere with anything
+        'PORT': '3306',  # I want this to be arbitrary. See docker-compose.
     }
 }
 

@@ -8,12 +8,15 @@ services:
     image: mysql:5.7
     restart: always
     ports:
-      - '7777:3306'  # Doubt 7777 will interfere with anything
+      - '3306:3306'  # I don't like overriding the host machine's 3306
+    expose:
+      - '3306'
     environment:
       MYSQL_DATABASE: 'djangosite1'
       MYSQL_USER: 'root'
       MYSQL_PASSWORD: 'sample'
       MYSQL_ROOT_PASSWORD: 'sample'
+      MYSQL_PORT_3306_TCP: 3306
 
   web:
     build: .
