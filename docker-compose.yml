@@ -11,6 +11,8 @@ services:
       - '7777:3306'  # Don't interfere with host:3306
     expose:
       - '7777'
+    volumes:
+      - ./db:/home
     environment:
       MYSQL_DATABASE: 'djangosite1'
       MYSQL_USER: 'root'

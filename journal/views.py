@@ -1,21 +1,24 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-import json
+from .models import Journal, Entry
 
 # Create your views here.
 
 # The difference between each journal page is really just the json it pulls the data from.
 # I should be able to use the same html template for everything
 
-def test(request):
+def all(request):
     
-    file = open('./static/journal/WebTest.json')
-    entries = json.loads(file.read())
+    # file = open('./static/journal/WebTest.json')
+    # entries = json.loads(file.read())
+
+    entries = Entry.objects.all().order_by('date')
     
     context = {
         'page': 'journal',
-        'entries': entries,
+        'jname': 'All',
+        'entry_enum': enumerate(entries),
     }
     
     return render(request, 'journal/journal.html', context)
@@ -24,14 +27,36 @@ def test(request):
 def index(request):
     # What would be useful to go in here?
         # Journal posts closest to your current location?
+
+    journals = Journal.objects.all()
+    nentries = [Entry.objects.all().count()]
+    for j in journals:
+        nentries += [Entry.objects.filter(journal__name__iexact=j.name).count()]
     
     context = {
         'page': 'journal',
-        'journals': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        'journal_enum': enumerate(journals),
+        'num_entries': nentries,
     }
     
     return render(request, 'journal/index.html', context)
 
+#------------------------------------------------------------------------
+def journal(request, jname):
+
+    # Pull all entries for this journal
+    # Probably just access a journal model object
+    # If DNE, have default
+    entries = Entry.objects.filter(journal__name__iexact=jname).order_by('date')
+
+    context = {
+        'page': 'journal',
+        'jname': jname.capitalize(),
+        'entry_enum': enumerate(entries),
+    }
+
+    return render(request, 'journal/journal.html', context)
+    
 #-------------------------------------------------------------------------------
 def year(request, year):
 
@@ -72,21 +97,6 @@ def year_month_day(request, year, month, day):
         'year': year,
         'month': month,
         'day': day,
-        'entries': entries,
-    }
-
-    return render(request, 'journal/journal.html', context)
-
-#------------------------------------------------------------------------
-def journal(request, jname):
-
-    # Pull all entries for this journal
-    # Probably just access a journal model object?
-    entries = 0
-
-    context = {
-        'page': 'journal',
-        'jname': jname,
         'entries': entries,
     }
 

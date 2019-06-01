@@ -10,8 +10,8 @@
     <div class="container">
       <div class="row no-gutters slider-text justify-content-center align-items-center">
         <div class="col-md-8 ftco-animate">
-          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p>
-          <h1 class="bread">Read Our Blog</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span class="mr-2"><a href="{% url 'journal:index' %}">Journal</a></span> <span>{{jname}}</span></p>
+          <h1 class="bread">Journal: {{jname}}</h1>
         </div>
       </div>
     </div>
@@ -21,142 +21,43 @@
       <div class="row d-flex">
         <div class="col-lg-8">
           <div class="row">
+            {% for i, e in entry_enum %}
+            <div class="col-md-12">
+              <div class="blog-entry ftco-animate d-md-flex">
+                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_' %}{{i|add:1}}.jpg);"></a>
+                <div class="text text-2 p-4">
+                  <h3 class="mb-2"><a href="single.html">{{e.journal.name}}: Entry #{{i|add:1}}</a></h3>
+                  <div class="meta-wrap">
+                    <p class="meta">
+                      <span>{{e.date}}</span>
+                      <span><a href="single.html">Entry #{{i|add:1}}</a></span>
+                      <span>5 Comment</span>
+                    </p>
+                  </div>
+                  <p class="mb-4">{{e.text}}}</p>
+                  <p><a href="#" class="btn-custom">See More <span class="ion-ios-arrow-forward"></span></a></p>
+                </div>
+              </div>
+            </div>
+            {% empty %}
             <div class="col-md-12">
               <div class="blog-entry ftco-animate d-md-flex">
                 <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_1.jpg' %});"></a>
                 <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
+                  <h3 class="mb-2"><a href="single.html">No Entries Here Yet</a></h3>
                   <div class="meta-wrap">
                     <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
+                      <span></span>
+                      <span><a href="single.html"></a></span>
+                      <span></span>
                     </p>
                   </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+                  <p class="mb-4">Come back later</p>
+                  <p><a href="#" class="btn-custom">See More <span class="ion-ios-arrow-forward"></span></a></p>
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_2.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_3.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_4.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_5.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_6.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_7.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_8.jpg' %});"></a>
-                <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">The Photography Technique</a></h3>
-                  <div class="meta-wrap">
-                    <p class="meta">
-                      <span>Dec 14, 2018</span>
-                      <span><a href="single.html">Photography</a></span>
-                      <span>5 Comment</span>
-                    </p>
-                  </div>
-                  <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div><!-- END-->
           <div class="row">
             <div class="col">
