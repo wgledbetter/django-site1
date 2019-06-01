@@ -12,4 +12,5 @@ urlpatterns = [
     path('<int:year>/<int:month>/', views.year_month, name='year_month'),
     path('<int:year>/<int:month>/<int:day>/', views.year_month_day, name='year_month_day'),
     path('<slug:jname>/', views.journal, name='journal-detail'),
+    path('entry/<uuid:euuid>', views.entry, name='entry'),
 ]

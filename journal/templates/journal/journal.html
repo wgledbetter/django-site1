@@ -11,7 +11,15 @@
       <div class="row no-gutters slider-text justify-content-center align-items-center">
         <div class="col-md-8 ftco-animate">
           <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span class="mr-2"><a href="{% url 'journal:index' %}">Journal</a></span> <span>{{jname}}</span></p>
+          {% if jname %}
           <h1 class="bread">Journal: {{jname}}</h1>
+          {% elif day %}
+          <h1 class="bread">{{year}}-{{month}}-{{day}}</h1>
+          {% elif month %}
+          <h1 class="bread">{{year}}-{{month}}</h1>
+          {% elif year %}
+          <h1 class="bread">{{year}}</h1>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -24,13 +32,13 @@
             {% for i, e in entry_enum %}
             <div class="col-md-12">
               <div class="blog-entry ftco-animate d-md-flex">
-                <a href="single.html" class="img img-2" style="background-image: url({% static 'base/images/image_' %}{{i|add:1}}.jpg);"></a>
+                <a href="{% url 'journal:entry' e.entry_uuid %}" class="img img-2" style="background-image: url({% static 'base/images/image_' %}{{i|add:1}}.jpg);"></a>
                 <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="single.html">{{e.journal.name}}: Entry #{{i|add:1}}</a></h3>
+                  <h3 class="mb-2"><a href="{% url 'journal:entry' e.entry_uuid %}">{{e.journal.name}}: Entry #{{i|add:1}}</a></h3>
                   <div class="meta-wrap">
                     <p class="meta">
                       <span>{{e.date}}</span>
-                      <span><a href="single.html">Entry #{{i|add:1}}</a></span>
+                      <span><a href="{% url 'journal:entry' e.entry_uuid %}">Entry #{{i|add:1}}</a></span>
                       <span>5 Comment</span>
                     </p>
                   </div>

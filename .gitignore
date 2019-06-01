@@ -106,4 +106,4 @@ venv.bak/
 
 ################################################################################
 # Personal
-private/  # Stuff like passwords, etc.
+.private  # Stuff like passwords, etc.

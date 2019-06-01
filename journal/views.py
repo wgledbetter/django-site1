@@ -3,6 +3,8 @@ from django.http import HttpResponse
 
 from .models import Journal, Entry
 
+import uuid
+
 # Create your views here.
 
 # The difference between each journal page is really just the json it pulls the data from.
@@ -61,7 +63,7 @@ def journal(request, jname):
 def year(request, year):
 
     # Pull entries for this year
-    entries = 0
+    entries = Entry.objects.filter(date__year__exact=year).order_by('date')
     
     context = {
         'page': 'journal',
@@ -75,7 +77,7 @@ def year(request, year):
 def year_month(request, year, month):
     
     # Pull entries for this month and year
-    entries = 0
+    entries = Entry.objects.filter(date__year__exact=year).filter(date__month__exact=month).order_by('date')
 
     context = {
         'page': 'journal',
@@ -90,7 +92,7 @@ def year_month(request, year, month):
 def year_month_day(request, year, month, day):
 
     # Pull entries for this day
-    entries = 0
+    entries = Entry.objects.filter(date__year__exact=year).filter(date__month__exact=month).filter(date__day__exact=day).order_by('date')
 
     context = {
         'page': 'journal',
@@ -101,3 +103,15 @@ def year_month_day(request, year, month, day):
     }
 
     return render(request, 'journal/journal.html', context)
+    
+#-------------------------------------------------------------------------------
+def entry(request, euuid):
+    
+    e = Entry.objects.filter(entry_uuid__exact=euuid)
+    
+    context = {
+        'page': 'journal',
+        'entry': e,
+    }
+    
+    return render(request, 'journal/entry.html', context)

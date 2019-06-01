@@ -125,7 +125,7 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$150000$BSVQYMWYrhMa$aFO8rA+oQFfZPAZzFNL+0VppE/IFRIbOo/1XvjBkh7U=','2019-06-01 05:08:39.397255',1,'admin','','','admin@admin.net',1,1,'2019-06-01 04:10:09.162603');
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$150000$BSVQYMWYrhMa$aFO8rA+oQFfZPAZzFNL+0VppE/IFRIbOo/1XvjBkh7U=','2019-06-01 15:27:43.264332',1,'admin','','','admin@admin.net',1,1,'2019-06-01 04:10:09.162603');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,7 +258,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,7 +267,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2019-06-01 04:10:08.057752'),(2,'auth','0001_initial','2019-06-01 04:10:08.210238'),(3,'admin','0001_initial','2019-06-01 04:10:08.698086'),(4,'admin','0002_logentry_remove_auto_add','2019-06-01 04:10:08.841901'),(5,'admin','0003_logentry_add_action_flag_choices','2019-06-01 04:10:08.855579'),(6,'contenttypes','0002_remove_content_type_name','2019-06-01 04:10:08.942335'),(7,'auth','0002_alter_permission_name_max_length','2019-06-01 04:10:08.964989'),(8,'auth','0003_alter_user_email_max_length','2019-06-01 04:10:09.001683'),(9,'auth','0004_alter_user_username_opts','2019-06-01 04:10:09.011836'),(10,'auth','0005_alter_user_last_login_null','2019-06-01 04:10:09.051164'),(11,'auth','0006_require_contenttypes_0002','2019-06-01 04:10:09.053159'),(12,'auth','0007_alter_validators_add_error_messages','2019-06-01 04:10:09.062199'),(13,'auth','0008_alter_user_username_max_length','2019-06-01 04:10:09.077186'),(14,'auth','0009_alter_user_last_name_max_length','2019-06-01 04:10:09.091844'),(15,'auth','0010_alter_group_name_max_length','2019-06-01 04:10:09.108927'),(16,'auth','0011_update_proxy_permissions','2019-06-01 04:10:09.143511'),(17,'base','0001_createsuperuser','2019-06-01 04:10:09.290568'),(18,'journal','0001_initial','2019-06-01 04:10:09.360866'),(19,'sessions','0001_initial','2019-06-01 04:10:09.476999'),(20,'journal','0002_entry_date','2019-06-01 04:55:45.304519');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2019-06-01 04:10:08.057752'),(2,'auth','0001_initial','2019-06-01 04:10:08.210238'),(3,'admin','0001_initial','2019-06-01 04:10:08.698086'),(4,'admin','0002_logentry_remove_auto_add','2019-06-01 04:10:08.841901'),(5,'admin','0003_logentry_add_action_flag_choices','2019-06-01 04:10:08.855579'),(6,'contenttypes','0002_remove_content_type_name','2019-06-01 04:10:08.942335'),(7,'auth','0002_alter_permission_name_max_length','2019-06-01 04:10:08.964989'),(8,'auth','0003_alter_user_email_max_length','2019-06-01 04:10:09.001683'),(9,'auth','0004_alter_user_username_opts','2019-06-01 04:10:09.011836'),(10,'auth','0005_alter_user_last_login_null','2019-06-01 04:10:09.051164'),(11,'auth','0006_require_contenttypes_0002','2019-06-01 04:10:09.053159'),(12,'auth','0007_alter_validators_add_error_messages','2019-06-01 04:10:09.062199'),(13,'auth','0008_alter_user_username_max_length','2019-06-01 04:10:09.077186'),(14,'auth','0009_alter_user_last_name_max_length','2019-06-01 04:10:09.091844'),(15,'auth','0010_alter_group_name_max_length','2019-06-01 04:10:09.108927'),(16,'auth','0011_update_proxy_permissions','2019-06-01 04:10:09.143511'),(17,'base','0001_createsuperuser','2019-06-01 04:10:09.290568'),(18,'journal','0001_initial','2019-06-01 04:10:09.360866'),(19,'sessions','0001_initial','2019-06-01 04:10:09.476999'),(20,'journal','0002_entry_date','2019-06-01 04:55:45.304519'),(21,'journal','0003_auto_20190601_1452','2019-06-01 15:27:17.574675'),(22,'journal','0004_auto_20190601_1527','2019-06-01 15:27:17.638114');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,7 +293,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('obh8bkook7zmjz416t7ur0kcsq0kgq8e','MjVmZjljNzIyZmQ5YTNiNzFhMDhmZjBjYWM2NTdiNGFiMzU5MTdiMjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2NmVlZTNmOWNhMDM1NDczY2Y1MDcxNjY1MDg5Mzg4NTg4ZjAyMTViIn0=','2019-06-15 05:08:39.401544');
+INSERT INTO `django_session` VALUES ('obh8bkook7zmjz416t7ur0kcsq0kgq8e','MjVmZjljNzIyZmQ5YTNiNzFhMDhmZjBjYWM2NTdiNGFiMzU5MTdiMjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2NmVlZTNmOWNhMDM1NDczY2Y1MDcxNjY1MDg5Mzg4NTg4ZjAyMTViIn0=','2019-06-15 05:08:39.401544'),('oi72v6bn48qrtodk9lruj4fbw7jl27sk','MjVmZjljNzIyZmQ5YTNiNzFhMDhmZjBjYWM2NTdiNGFiMzU5MTdiMjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2NmVlZTNmOWNhMDM1NDczY2Y1MDcxNjY1MDg5Mzg4NTg4ZjAyMTViIn0=','2019-06-15 15:27:43.267283');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -309,6 +309,7 @@ CREATE TABLE `journal_entry` (
   `text` longtext NOT NULL,
   `journal_id` int(11) NOT NULL,
   `date` datetime(6) NOT NULL,
+  `entry_uuid` char(32) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `journal_entry_journal_id_841340c5_fk_journal_journal_id` (`journal_id`),
   CONSTRAINT `journal_entry_journal_id_841340c5_fk_journal_journal_id` FOREIGN KEY (`journal_id`) REFERENCES `journal_journal` (`id`)
@@ -321,7 +322,7 @@ CREATE TABLE `journal_entry` (
 
 LOCK TABLES `journal_entry` WRITE;
 /*!40000 ALTER TABLE `journal_entry` DISABLE KEYS */;
-INSERT INTO `journal_entry` VALUES (1,'This is the first entry in journal A.\r\nWow. Lots of text.',1,'2019-06-01 05:04:37.000000'),(2,'Another JA entry',1,'2019-06-01 05:09:31.000000'),(3,'Journal B wooooooooooooooooo...',2,'2019-06-01 05:04:29.000000'),(4,'so fake.',3,'2019-06-01 05:04:29.000000'),(5,'This is mine. wowo.',4,'2019-06-01 05:04:37.000000'),(6,'another one....',3,'2019-06-01 05:36:59.000000');
+INSERT INTO `journal_entry` VALUES (1,'This is the first entry in journal A.\r\nWow. Lots of text.',1,'2019-06-01 05:04:37.000000','0aee329a942b450fa0f11ff4c41bda6e'),(2,'Another JA entry',1,'2019-06-01 05:09:31.000000','0aee329a942b450fa0f11ff4c41bda6e'),(3,'Journal B wooooooooooooooooo...',2,'2019-06-01 05:04:29.000000','0aee329a942b450fa0f11ff4c41bda6e'),(4,'so fake.',3,'2019-06-01 05:04:29.000000','0aee329a942b450fa0f11ff4c41bda6e'),(5,'This is mine. wowo.',4,'2019-06-01 05:04:37.000000','0aee329a942b450fa0f11ff4c41bda6e'),(6,'another one....',3,'2019-06-01 05:36:59.000000','0aee329a942b450fa0f11ff4c41bda6e');
 /*!40000 ALTER TABLE `journal_entry` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -358,4 +359,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-01  5:55:07
+-- Dump completed on 2019-06-01 15:30:23

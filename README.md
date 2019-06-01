@@ -11,3 +11,4 @@ Personal Notes:
     docker-container exec web bash
 
     mysqldump -uroot -p djangosite1 > /home/djangosite1_dump.sql
+    mysql -uroot -p djangosite1 < /home/djangosite1_dump.sql
