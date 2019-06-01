@@ -33,10 +33,61 @@ def index(request):
     return render(request, 'journal/index.html', context)
 
 #-------------------------------------------------------------------------------
-def food(request):
+def year(request, year):
+
+    # Pull entries for this year
+    entries = 0
     
     context = {
         'page': 'journal',
+        'year': year,
+        'entries': entries,
     }
+
+    return render(request, 'journal/journal.html', context)
+
+#-------------------------------------------------------------------------------
+def year_month(request, year, month):
     
-    return HttpResponse('Food Journal Index', context)
+    # Pull entries for this month and year
+    entries = 0
+
+    context = {
+        'page': 'journal',
+        'year': year,
+        'month': month,
+        'entries': entries,
+    }
+
+    return render(request, 'journal/journal.html', context)
+
+#-------------------------------------------------------------------------------
+def year_month_day(request, year, month, day):
+
+    # Pull entries for this day
+    entries = 0
+
+    context = {
+        'page': 'journal',
+        'year': year,
+        'month': month,
+        'day': day,
+        'entries': entries,
+    }
+
+    return render(request, 'journal/journal.html', context)
+
+#------------------------------------------------------------------------
+def journal(request, jname):
+
+    # Pull all entries for this journal
+    # Probably just access a journal model object?
+    entries = 0
+
+    context = {
+        'page': 'journal',
+        'jname': jname,
+        'entries': entries,
+    }
+
+    return render(request, 'journal/journal.html', context)
