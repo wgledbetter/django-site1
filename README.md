@@ -12,3 +12,5 @@ Personal Notes:
 
     mysqldump -uroot -p djangosite1 > /home/djangosite1_dump.sql
     mysql -uroot -p djangosite1 < /home/djangosite1_dump.sql
+    
+    sqlite3 storage.sqlite .dump > output_before.sql
