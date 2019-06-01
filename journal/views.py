@@ -18,7 +18,7 @@ def test(request):
         'entries': entries,
     }
     
-    return render(request, 'journal/index.html', context)
+    return render(request, 'journal/journal.html', context)
 
 #-------------------------------------------------------------------------------
 def index(request):
@@ -27,6 +27,7 @@ def index(request):
     
     context = {
         'page': 'journal',
+        'journals': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     }
     
     return render(request, 'journal/index.html', context)
