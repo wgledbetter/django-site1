@@ -29,7 +29,8 @@ ALLOWED_HOSTS = [
     # '0cb5c073ee2343329190a606a61b28f8.vfs.cloud9.us-east-2.amazonaws.com',
     # '78380b6ebe494061bdec7d653cd183d2.vfs.cloud9.us-east-2.amazonaws.com',
     # 'da73186fb4c146dd9e6a8fede3577bc5.vfs.cloud9.us-east-2.amazonaws.com',
-    '1a71c15cf6d345da8361ca5dd60324e4.vfs.cloud9.us-east-2.amazonaws.com',
+    '1a71c15cf6d345da8361ca5dd60324e4.vfs.cloud9.us-east-2.amazonaws.com',  # Cloud9 Amazon Linux
+    'd3e9d7143cd44c8e9b52da9ac9bcaef1.vfs.cloud9.us-east-2.amazonaws.com',  # Cloud9 Ubuntu
     '127.0.0.1',
     '0.0.0.0',
     ]

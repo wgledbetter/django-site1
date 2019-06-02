@@ -11,6 +11,7 @@ RUN pip install --trusted-host pypi.python.org \
     gunicorn==19.9.0 \
     sqlparse==0.3.0 \
     mysqlclient
+    # pybind11
     
 #    plotly \
 #    pandas
