@@ -24,6 +24,3 @@ EXPOSE 8000
 
 # Copy App Code
 COPY . /home/
-
-# Copy private data
-COPY ../private /private

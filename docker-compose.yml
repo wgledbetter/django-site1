@@ -22,7 +22,7 @@ services:
 
   web:
     build: .
-    command: bash -c "cd home && ./wait-for-it.sh db:3306 -- ./start.sh"
+    command: bash -c "cd home && ./wait-for-it.sh db:3306 -s -- ./start.sh"
     ports:
       - "8080:8080"
       - "8000:8000"
