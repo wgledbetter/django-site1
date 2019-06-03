@@ -22,7 +22,7 @@ def filljournal(apps, schema_editor):
     j_pk = []
     for j in c.execute('SELECT * FROM journal'):
         jrnl = Journal()
-        jrnl.name = j[7]
+        jrnl.name = j[7].replace(' ', '_')
         jrnl.save()
         j_pk += [j[0]]
 
@@ -63,7 +63,6 @@ def filljournal(apps, schema_editor):
     # Create Entries
     e_pk = []
     for e in c.execute('SELECT * FROM entry'):
-        print(e[0])
         entry = Entry()
         entry.journal = Journal.objects.get(id=j_pk.index(e[4])+1)
         entry.date = e[12]
@@ -72,7 +71,7 @@ def filljournal(apps, schema_editor):
         except:
             entry.location = Location.objects.get(id=l_pk.index(-1)+1)
         entry.starred = (e[3]==1)
-        entry.text = e[16]
+        entry.text = e[16].encode(encoding='UTF-8', errors='strict')
         entry.timezone = e[20]
         entry.entry_uuid = uuid.UUID(e[17])
         try:
