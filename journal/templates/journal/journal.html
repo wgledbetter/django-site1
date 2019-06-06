@@ -29,19 +29,22 @@
       <div class="row d-flex">
         <div class="col-lg-8">
           <div class="row">
-            {% for i, e in entry_enum %}
+            {% for e in entries %}
             <div class="col-md-12">
               <div class="blog-entry ftco-animate d-md-flex">
+                <!--Need to only show picture if there is a picture-->
                 <a href="{% url 'journal:entry' e.entry_uuid %}" class="img img-2" style="background-image: url({% static 'base/images/image_' %}{{i|add:1}}.jpg);"></a>
                 <div class="text text-2 p-4">
-                  <h3 class="mb-2"><a href="{% url 'journal:entry' e.entry_uuid %}">{{e.journal.name}}: Entry #{{i|add:1}}</a></h3>
+                  <h3 class="mb-2"><a href="{% url 'journal:entry' e.entry_uuid %}">{{e.journal.name}}: Entry #{{forloop.counter0|add:firstEntryID}}</a></h3>
                   <div class="meta-wrap">
                     <p class="meta">
+                      <!--Need to make the date correspond to the timezone-->
                       <span>{{e.date}}</span>
-                      <span><a href="{% url 'journal:entry' e.entry_uuid %}">Entry #{{i|add:1}}</a></span>
-                      <span>5 Comment</span>
+                      <span><a href="{% url 'journal:entry' e.entry_uuid %}">Entry #{{forloop.counter0|add:firstEntryID}}</a></span>
+                      <!--<span>5 Comment</span>-->
                     </p>
                   </div>
+                  <!--need to truncate text at a limit-->
                   <p class="mb-4">{{e.text}}}</p>
                   <p><a href="#" class="btn-custom">See More <span class="ion-ios-arrow-forward"></span></a></p>
                 </div>
@@ -71,13 +74,21 @@
             <div class="col">
               <div class="block-27">
                 <ul>
-                  <li><a href="#">&lt;</a></li>
+                  {% if entries.has_previous %}
+                  <li><a href="?page=1">&laquo;</a></li>
+                  <li><a href="?page={{ entries.previous_page_number }}">&lt;</a></li>
+                  {% endif %}
+                  <!--Here, I want to only show three numbers above or below-->
                   <li class="active"><span>1</span></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                   <li><a href="#">4</a></li>
                   <li><a href="#">5</a></li>
-                  <li><a href="#">&gt;</a></li>
+                  
+                  {% if entries.has_next %}
+                  <li><a href="?page={{ entries.next_page_number }}">&gt;</a></li>
+                  <li><a href="?page={{ entries.paginator.num_pages }}">&raquo;</a></li>
+                  {% endif %}
                 </ul>
               </div>
             </div>

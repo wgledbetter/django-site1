@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.paginator import Paginator
+
 
 from .models import Journal, Entry
 
@@ -16,6 +18,7 @@ def all(request):
     # entries = json.loads(file.read())
 
     entries = Entry.objects.all().order_by('date')
+    pag = Paginator(entries, 25)
     
     context = {
         'page': 'journal',
@@ -50,11 +53,16 @@ def journal(request, jname):
     # Probably just access a journal model object
     # If DNE, have default
     entries = Entry.objects.filter(journal__name__iexact=jname).order_by('date')
+    nPerPage = 15
+    pag = Paginator(entries, nPerPage)
+    pageNum = int(request.GET.get('page'))
+    pageEntries = pag.get_page(pageNum)
 
     context = {
         'page': 'journal',
         'jname': jname.capitalize(),
-        'entry_enum': enumerate(entries),
+        'entries': pageEntries,
+        'firstEntryID': (pageNum-1)*nPerPage + 1
     }
 
     return render(request, 'journal/journal.html', context)
@@ -109,9 +117,12 @@ def entry(request, euuid):
     
     e = Entry.objects.filter(entry_uuid__exact=euuid)
     
+    # Need to do text parsing to identify photos and insert them
+    # Also line breaks, probably
+    
     context = {
         'page': 'journal',
-        'entry': e,
+        'entry': e[0],
     }
     
     return render(request, 'journal/entry.html', context)
