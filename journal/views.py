@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator
 
+# import bytes
 
 from .models import Journal, Entry
 
@@ -55,7 +56,11 @@ def journal(request, jname):
     entries = Entry.objects.filter(journal__name__iexact=jname).order_by('date')
     nPerPage = 15
     pag = Paginator(entries, nPerPage)
-    pageNum = int(request.GET.get('page'))
+    try:
+        pageNum = int(request.GET.get('page'))
+    except:
+        pageNum = 1
+        
     pageEntries = pag.get_page(pageNum)
 
     context = {
@@ -123,6 +128,7 @@ def entry(request, euuid):
     context = {
         'page': 'journal',
         'entry': e[0],
+        'text': e[0].text
     }
     
     return render(request, 'journal/entry.html', context)

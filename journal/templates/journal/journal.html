@@ -45,7 +45,8 @@
                     </p>
                   </div>
                   <!--need to truncate text at a limit-->
-                  <p class="mb-4">{{e.text}}}</p>
+                  <!--Also format it if there's no pic-->
+                  <p class="mb-4">{{e.text|linebreaksbr}}}</p>
                   <p><a href="#" class="btn-custom">See More <span class="ion-ios-arrow-forward"></span></a></p>
                 </div>
               </div>
@@ -75,7 +76,7 @@
               <div class="block-27">
                 <ul>
                   {% if entries.has_previous %}
-                  <li><a href="?page=1">&laquo;</a></li>
+                  <li><a href="?page=1">&lt;&lt;</a></li>
                   <li><a href="?page={{ entries.previous_page_number }}">&lt;</a></li>
                   {% endif %}
                   <!--Here, I want to only show three numbers above or below-->
@@ -87,7 +88,7 @@
                   
                   {% if entries.has_next %}
                   <li><a href="?page={{ entries.next_page_number }}">&gt;</a></li>
-                  <li><a href="?page={{ entries.paginator.num_pages }}">&raquo;</a></li>
+                  <li><a href="?page={{ entries.paginator.num_pages }}">&gt;&gt;</a></li>
                   {% endif %}
                 </ul>
               </div>

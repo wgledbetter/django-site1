@@ -71,7 +71,7 @@ def filljournal(apps, schema_editor):
         except:
             entry.location = Location.objects.get(id=l_pk.index(-1)+1)
         entry.starred = (e[3]==1)
-        entry.text = e[16].encode(encoding='UTF-8', errors='strict')
+        entry.text = e[16]
         entry.timezone = e[20]
         entry.entry_uuid = uuid.UUID(e[17])
         try:

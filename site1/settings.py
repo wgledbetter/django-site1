@@ -106,6 +106,11 @@ DATABASES = {
         'PASSWORD': 'sample',
         'HOST': 'db',
         'PORT': '3306',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'use_unicode': True,
+            'init_command': 'ALTER DATABASE djangosite1 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci'
+        }
     }
 }
 

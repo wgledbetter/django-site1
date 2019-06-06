@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# exec ping -c 25 db
-
 python manage.py makemigrations
 python manage.py migrate
 
