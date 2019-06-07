@@ -10,10 +10,10 @@ RUN pip install --trusted-host pypi.python.org \
     django-mysql==3.1.0 \
     gunicorn==19.9.0 \
     sqlparse==0.3.0 \
-    mysqlclient
-    # pybind11
-    
-#    plotly \
+    mysqlclient \
+    plotly \
+    numpy \
+    scipy
 #    pandas
 
 # For AWS Cloud9 Development
