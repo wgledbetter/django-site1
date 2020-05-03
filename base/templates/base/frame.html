@@ -35,17 +35,17 @@
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url({% static 'base/images/author.jpg' %});"></span>William Ledbetter</a></h1>
+			<h1 id="colorlib-logo"><a href="/"><span class="img" style="background-image: url({% static 'base/images/author.jpg' %});"></span>William Ledbetter</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li class="{% if page == 'base' %} colorlib-active {% endif %}">
 					  <a href="/">Home</a>
 					</li>
 					<li class="{% if page == 'pro' %} colorlib-active {% endif %}">
-					  <a href="collection.html">Professional Work</a>
+					  <a href="{% url 'work:index' %}">Work</a>
 					</li>
 					<li class="{% if page == 'about' %} colorlib-active {% endif %}">
-					  <a href="about.html">About Me</a>
+					  <a href="{% url 'bio:index' %}">Bio</a>
 					</li>
 					<li class="{% if page == 'journal' %} colorlib-active {% endif %}">
 					  <a href="{% url 'journal:index' %}">Journal</a>
@@ -55,9 +55,12 @@
 					</li>
 					<li class="{% if page == 'effection' %} colorlib-active {% endif %}">
 					  <a href="{% url 'effection:index' %}">Effection</a>
-					</li>
+          </li>
+          <li class="{% if page == 'projects' %} colorlib-active {% endif %}">
+            <a href="{% url 'projects:index' %}">Projects</a>
+          </li>
 					<li class="{% if page == 'contact' %} colorlib-active {% endif %}">
-					  <a href="contact.html">Contact</a>
+					  <a href="{% url 'contact:index' %}">Contact</a>
 					</li>
 				</ul>
 			</nav>

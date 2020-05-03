@@ -55,6 +55,9 @@ INSTALLED_APPS = [
     'journal',
     'effection',
     'astro',
+    'bio',
+    'work',
+    'contact',
 ]
 
 MIDDLEWARE = [

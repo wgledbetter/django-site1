@@ -25,5 +25,8 @@ urlpatterns = [
     path('journal/', include('journal.urls', namespace='journal')),
     path('effection/', include('effection.urls', namespace='effection')),
     path('astro/', include('astro.urls', namespace='astro')),
+    path('bio/', include('bio.urls', namespace='bio')),
+    path('work/', include('work.urls', namespace='work',)),
+    path('contact/', include('contact.urls', namespace='contact')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

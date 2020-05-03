@@ -13,7 +13,8 @@ RUN pip install --trusted-host pypi.python.org \
     mysqlclient \
     plotly \
     numpy \
-    scipy
+    scipy \
+    pybind11
 #    pandas
 
 # For AWS Cloud9 Development

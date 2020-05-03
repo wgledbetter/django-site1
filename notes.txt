@@ -1,0 +1,4 @@
+2 May:
+    astro should have a trajectory generator with xyzuvw inputs as url queries
+    projects is all github projects: effection, stonx, this site
+    work is a resume
